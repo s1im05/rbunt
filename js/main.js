@@ -6,6 +6,11 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
 
 ((w, $, u) => {
     $(function (){
-
+        const resize = () => {
+            $('.img-zoomable').each(function(){
+                $(this).height($(this).width());
+            });
+        };
+        $(w).on('resize', resize).trigger('resize');
     });
 })(window, jQuery);

@@ -1,17 +1,7 @@
 @import "variables";
 
-@font-face {
-  font-family: 'Avenir Next Cyr Regular';
-  src: url('../assets/font/AvenirNextCyr-Regular.eot');
-  src: url('../assets/font/AvenirNextCyr-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../assets/font/AvenirNextCyr-Regular.woff') format('woff'),
-  url('../assets/font/AvenirNextCyr-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-  font-family: 'Avenir Next Cyr Regular', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   background: #f3f3f3;
   padding-top: $nav-height;
 }
@@ -19,7 +9,7 @@ body {
 a {
   text-decoration: none;
   &:hover {
-    color: darken($bg-gold, 20);
+    color: darken($bg, 20);
   }
 }
 
@@ -32,11 +22,11 @@ a {
 }
 
 .light-gold {
-  background: $bg-gold-light;
+  background: $bg-light;
 }
 
 .color-gold {
-  color: $bg-gold
+  color: $bg;
 }
 
 main {

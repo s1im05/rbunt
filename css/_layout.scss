@@ -16,6 +16,9 @@
     margin-top: 30px;
     color: $nav-color;
   }
+  a:hover > img {
+    opacity: .8;
+  }
   .delim {
     margin: 28px 25px;
     float: right;
@@ -34,10 +37,35 @@
   }
 }
 
+.carousel {
+  position: relative;
+  &.carousel-main {
+    padding: 0;
+  }
+
+  .carousel-control {
+    z-index: 2;
+    &.left {
+      background: url(../assets/carousel_prev.png) center no-repeat;
+    }
+    &.right {
+      background: url(../assets/carousel_next.png) center no-repeat;
+    }
+  }
+  .main-logo {
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 100%;
+    top: 100px;
+    background: url(../assets/main_title.png) center no-repeat;
+  }
+}
+
 .footer {
   padding: 40px 40px;
   background: $bg;
-  color: #ccccb0;
+  color: $nav-color;
   font-size: 14px;
   .follow {
     min-width: 200px;

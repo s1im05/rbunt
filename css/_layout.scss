@@ -1,0 +1,378 @@
+@import "variables";
+
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.c-nav {
+  height: $nav-height;
+  background: $bg-gold;
+  color: white;
+  font-size: 18px;
+  a, a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .introduction, .book, .lang {
+    margin-top: 32px;
+  }
+  .lang {
+    font-weight: bold;
+  }
+  .delim {
+    margin: 20px 25px;
+    float: right;
+    border-left: 1px solid white;
+    width: 1px;
+    height: 48px;
+  }
+  .book {
+    margin-right: 10px;
+  }
+  .logo {
+    float: left;
+    margin-top: 10px;
+    margin-right: 30px;
+    img {
+
+    }
+  }
+}
+
+.carousel {
+  &.container {
+    padding: 0;
+  }
+  .main-logo, .apartment-logo {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    right: 100px;
+    z-index: 90;
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+  .apartment-logo {
+    left: 150px;
+    right: 150px;
+    top: 185px;
+  }
+  .carousel-control {
+    background-image: none;
+    &.left > img, &.right > img {
+      margin-top: -23px;
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+    }
+    &.left > img {
+      left: 40px
+    }
+    &.right > img {
+      right: 40px;
+    }
+  }
+  &.carousel-apartment {
+    .carousel-control {
+      background-image: none;
+      &.left > img, &.right > img {
+        margin-top: -50px;
+      }
+    }
+  }
+  &.carousel-apt {
+    margin-top: 40px;
+    .carousel-control {
+      background-image: none;
+      &.left > img, &.right > img {
+        margin-top: -50px;
+      }
+    }
+  }
+  .carousel-caption {
+    .delim {
+      border-left: 1px solid white;
+      display: inline-block;
+      height: 40px;
+      position: relative;
+      top: 12px;
+      margin: 0 15px;
+    }
+    &>a, &>a:hover {
+      text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+    }
+  }
+}
+
+.booking {
+  .weekly {
+    font-size: 20px;
+    margin: 30px 0;
+  }
+}
+footer.booking-footer {
+  background: $bg-gold;
+  padding: 100px 30px;
+  img {
+    max-width: 100%;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  .info-row {
+
+  }
+}
+
+.ap-back {
+  color: $bg-gold;
+  position: absolute;
+  background: url(../assets/sprites.png) 0 0 no-repeat;
+  line-height: 55px;
+  padding-left: 50px;
+  top: 50px;
+  left: 30px;
+}
+
+.apartment {
+  position: relative;
+  font-size: 26px;
+  .apt-title {
+    font-size: 62px;
+    font-weight: 400;
+    margin: .5em 0;
+  }
+  .ap-title-2, .ap-title-3 {
+    color: $bg-gold;
+    font-size: 50px;
+    margin: 1em;
+    a {
+      color: $bg-gold;
+      text-decoration: underline;
+      &:hover {
+        color: darken($bg-gold, 20);
+      }
+    }
+  }
+  .ap-title-3 {
+    font-size: 36px;
+  }
+  p {
+    padding: 0 40px;
+    position: relative;
+    &.delim:after {
+      $width: 200px;
+      content: '';
+      display: block;
+      position: absolute;
+      border-top: 1px solid $bg-gold;
+      width: $width;
+      height: 1px;
+      left: 50%;
+      margin-left: -1 * $width / 2;
+      bottom: -20px;
+    }
+    &.delim {
+      margin-bottom: 50px;
+    }
+  }
+  .carousel {
+    margin-bottom: 30px;
+  }
+}
+
+.plan-link {
+  text-align: center;
+  margin: 2em 0;
+  font-size: 28px;
+  a {
+    color: $bg-gold;
+    text-decoration: underline;
+  }
+  .plan-link__icon {
+    display: inline-block;
+    background: url(../assets/sprites.png) 0 -74px no-repeat;
+    width: 50px;
+    height: 40px;
+    vertical-align: middle;
+  }
+}
+
+
+.location-map {
+  margin-bottom: 40px;
+  img {
+    max-width: 100%;
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,.3);
+  }
+}
+.location-key {
+  margin: 60px 0;
+  img {
+    max-width: 100%;
+  }
+}
+.location-mail {
+  font-weight: bold;
+  line-height: 1.5em;
+  margin: 2em 0;
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+.location-table {
+  font-size: 18px;
+}
+.location {
+  p {
+    font-size: 18px;
+  }
+}
+
+.prices {
+  >thead {
+    background: $bg-gold;
+    color: #fff;
+    th {
+      text-align: center;
+    }
+  }
+  >tbody {
+    td {
+      text-align: center;
+    }
+  }
+}
+
+
+.img-zoomable {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  transition: background-size 2s linear;
+  &.bg1 {
+    background: url(../assets/apt-bg-piano.jpg) center no-repeat;
+    background-size: 100% 100%;
+  }
+  &.bg2 {
+    background: url(../assets/apt-bg-wooden.jpg) center no-repeat;
+    background-size: 100% 100%;
+  }
+  &.bg3 {
+    background: url(../assets/apt-bg-penthouse.jpg) center no-repeat;
+    background-size: 100% 100%;
+  }
+  &.bg4 {
+    background: url(../assets/apt-bg-deluxe.jpg) center no-repeat;
+    background-size: 100% 100%;
+  }
+  &:hover {
+    background-size: 120% 120%;
+  }
+  .look {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    top: 50%;
+    margin-top: -13px;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 20;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-top: 1px solid #fff;
+      width: 100px;
+      height: 1px;
+      margin-left: 30px;
+    }
+    &:before {
+      top: -8px;
+    }
+    &:after {
+      bottom: -5px;
+    }
+  }
+}
+
+.sprite-icon {
+  vertical-align: middle;
+  display: inline-block;
+  background: url(../assets/sprites.png) no-repeat;
+  width: 70px;
+  height: 100px;
+  &.wifi {
+    background-position: 0 -130px;
+  }
+  &.towel {
+    background-position: 0 -230px;
+  }
+  &.ski {
+    background-position: 0 -330px;
+  }
+  &.parking {
+    background-position: 0 -430px
+  }
+}
+
+.article {
+  padding: 30px;
+  font-size: 22px;
+  background: white;
+  h3 {
+    margin: 1em 0 1em 0;
+    color: $bg-gold;
+    &.underlined {
+      border-bottom: 1px solid $bg-gold;
+      padding-bottom: 1em;
+    }
+  }
+  img {
+    max-width: 100%;
+  }
+  &.light-gold {
+    background: $bg-gold-light;
+  }
+  p {
+    margin: .7em 0;
+  }
+}
+
+.footer {
+  padding: 10px 15px 20px 15px;
+  background: $bg-gold;
+  color: white;
+  font-size: 22px;
+  .contacts, .follow {
+    padding-top: 30px;
+  }
+  .follow {
+    img {
+      margin-right: 1em;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  .logo {
+    margin: 0 20px;
+    &> img {
+      max-width: 300px;
+    }
+  }
+}

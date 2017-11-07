@@ -21,6 +21,19 @@
   .menu {
     padding: 30px 20px;
   }
+  .bron {
+    background: $nav-color;
+    color: $bg;
+    padding: 10px 18px;
+    border-radius: 3px;
+    margin-left: 2em;
+    text-decoration: none!important;
+    &:hover {
+      color: $bg;
+      background: darken($nav-color, 10);
+      text-decoration: none;
+    }
+  }
   .delim {
     margin: 28px 25px;
     border-left: 1px solid $nav-color;
@@ -69,7 +82,7 @@
 }
 
 .img-zoomable {
-  border: 1px solid $nav-color;
+  display: block;
   margin: 1.5em;
   overflow: hidden;
   img {
@@ -85,14 +98,32 @@
 }
 
 .article {
+  padding: 0 20px;
   font-size: calc(12px + 0.6vw);
   h3 {
-    margin: 30px 0;
+    margin: 40px 0 20px 0;
     font-size: 1.75em;
     color: #eea236;
   }
   &.light-gold {
     color: $nav-color;
+  }
+  &.dark {
+    background: $bg;
+    color: $nav-color;
+  }
+  &.email {
+    h3 {
+      margin: 10px 0;
+      font-size: 1.5em;
+    }
+    .form-inline {
+      margin-bottom: 20px;
+    }
+    button {
+      background: $nav-color;
+      color: $bg;
+    }
   }
 }
 

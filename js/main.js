@@ -10,7 +10,13 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
             $('.img-zoomable').each(function(){
                 $(this).height($(this).width());
             });
+            $('#xs-menu').hide();
         };
         $(w).on('resize', resize).trigger('resize');
+
+        $('#xs-menu-toggle').on('tap click', function(e) {
+            e.preventDefault();
+            $('#xs-menu').toggle();
+        });
     });
 })(window, jQuery);

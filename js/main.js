@@ -27,5 +27,17 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
             e.preventDefault();
             $('#modal').hide();
         });
+
+        // bron
+        $('#bron_send').on('click', function(e) {
+            $(this).prop('disabled', true);
+            const form = $('#bron_form');
+            $.post(form.data('url'), form.serializeArray(), function(res) {
+                form.html('<p>Ваша заявка принята!</p>');
+                setTimeout(() => {
+                    $('#modal').hide();
+                }, 5000);
+            });
+        });
     });
 })(window, jQuery);

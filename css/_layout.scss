@@ -88,6 +88,9 @@
   text-align: center;
   padding: 30px 0;
   background: url(../assets/main1.jpg) center no-repeat;
+  & > img {
+    max-width: 100% !important;
+  }
 }
 
 .img-zoomable {
@@ -218,6 +221,12 @@
     padding: 0 8px;
     & >input, & > button {
       width: 100%;
+    }
+  }
+
+  .narrow-logo {
+    & > img {
+      padding: 0 15px;
     }
   }
 }

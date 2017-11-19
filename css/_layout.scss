@@ -12,11 +12,16 @@
   background: $bg;
   color: $nav-color;
   font-size: 18px;
-  a, a:hover {
+  a {
     color: $nav-color;
-  }
-  a:hover > img {
-    opacity: .8;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: darken($nav-color, 10);
+      img {
+        opacity: .8;
+      }
+    }
   }
   .menu {
     padding: 15px 0;

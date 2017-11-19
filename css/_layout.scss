@@ -163,6 +163,9 @@
   & > li > a {
     color: $nav-color !important;
     font-size: 1.5em !important;
+    &:hover {
+      background: $bg-light !important;
+    }
   }
 }
 

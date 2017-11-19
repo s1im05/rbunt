@@ -158,6 +158,12 @@
     font-weight: bold;
     margin-top: 0;
   }
+  a {
+    color: $nav-color;
+    &:hover {
+      color: darken($nav-color, 10);
+    }
+  }
 }
 
 #xs-menu {
@@ -171,6 +177,13 @@
     &:hover {
       background: $bg-light !important;
     }
+  }
+}
+
+#modal {
+  display: none;
+  & > .modal {
+    display: block;
   }
 }
 

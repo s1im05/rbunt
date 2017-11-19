@@ -18,5 +18,14 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
             e.preventDefault();
             $('#xs-menu').toggle();
         });
+
+        $(document).on('click', '.bron-btn', function(e) {
+            e.preventDefault();
+            $('#modal').show();
+        })
+        .on('click', '.modal-close', function(e) {
+            e.preventDefault();
+            $('#modal').hide();
+        });
     });
 })(window, jQuery);

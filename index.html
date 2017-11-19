@@ -23,7 +23,7 @@
                 <a href="#">отзывы</a>
                 <span class="delim"></span>
                 <a href="#">контакты</a>
-                <a href="#" class="bron">
+                <a href="#" class="bron bron-btn">
                     забронировать
                 </a>
             </div>
@@ -34,7 +34,7 @@
                 <li><a href="#">залы</a></li>
                 <li><a href="#">отзывы</a></li>
                 <li><a href="#">контакты</a></li>
-                <li><a href="#">забронировать</a></li>
+                <li><a class="bron-btn" href="#">забронировать</a></li>
             </ul>
         </nav>
     </div>
@@ -147,7 +147,7 @@
 <footer class="footer container">
     <div class="inline-block pull-left contacts">
         <h4>КОНТАКТЫ</h4>
-        <p>ул. Маршала Жукова 32/1, пн-вс 12:00-00:00.<br>Заказ столиков по телефону: (3532)72-96-74 / email: info@russkiybunt.ru</p>
+        <p>ул. Маршала Жукова 32/1, пн-вс 12:00-00:00.<br>Заказ столиков по телефону: (3532)72-96-74 / email: <a href="/">info@russkiybunt.ru</a></p>
         Ресторан «Русский Бунт». Лучшие свадьбы и банкеты в Оренбурге.
     </div>
     <div class="pull-right follow">
@@ -157,6 +157,24 @@
         </a>
     </div>
 </footer>
+
+<div id="modal" class="modal-backdrop">
+    <div class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close modal-close"><span>&times;</span></button>
+                    <h4 class="modal-title">Забронировать</h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Отправить</button>
+                    <button class="btn btn-default modal-close">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="dist/main-bundle.js"></script>
 </body>

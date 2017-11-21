@@ -170,6 +170,24 @@
   }
 }
 
+.main-title {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 56px;
+  color: $bg-light;
+  position: relative;
+  margin-bottom: 1em;
+  &:after {
+    content: '';
+    position: absolute;
+    border-top: 1px solid $bg-light;
+    bottom: -0.3em;
+    left: 28%;
+    right: 28%;
+
+  }
+}
+
 .footer {
   padding: 40px 40px;
   background: $bg;

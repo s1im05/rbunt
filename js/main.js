@@ -25,7 +25,7 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
         })
         .on('click', '.modal-close', function(e) {
             e.preventDefault();
-            $('#modal').hide();
+            $('.modal-backdrop').hide();
         });
 
         // bron
@@ -38,6 +38,11 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
                     $('#modal').hide();
                 }, 5000);
             });
+        });
+
+        // gb
+        $('#gb-btn').on('click', function(e) {
+            $('#gb_modal').show();
         });
     });
 })(window, jQuery);

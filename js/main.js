@@ -44,5 +44,24 @@ import '../node_modules/bootstrap/dist/js/bootstrap'
         $('#gb-btn').on('click', function(e) {
             $('#gb_modal').show();
         });
+
+        // feedback
+        $('#gb_send').on('click', function(e){
+            $('#gb_errors').html('');
+            $('#gb_send').prop('disabled', true);
+            const form = $('#bron_form');
+            $.post('?send', form.serialize(), (res) => {
+                if (res === true) {
+                    location.href = '?s=1';
+                } else if (res && res.length) {
+                    $('#gb_send').prop('disabled', false);
+                    let jqKaptcha = $('#gb_kaptcha'), src = jqKaptcha.attr('src');
+                    jqKaptcha.attr('src', src.substr(0, src.indexOf('r=') + 2) + new Date().getTime());
+                    for (let mes of res) {
+                        $('#gb_errors').append(`<p>${mes}</p>`);
+                    }
+                }
+            });
+        });
     });
 })(window, jQuery);
